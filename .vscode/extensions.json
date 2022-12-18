@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "rocketseat.rocketseatreactjs",
+        "vscode-icons-team.vscode-icons",
+        "styled-components.vscode-styled-components",
+        "eamodio.gitlens"
+    ]
+}
