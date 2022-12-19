@@ -1,12 +1,10 @@
 import React from "react";
-import Link from "next/link";
+import Link from "../components/Link";
 
 const IndexPage = () => 
 	<>
 		<h1>Hello Next.js 👋</h1>
-		<p>
-			<Link href="/about">About</Link>
-		</p>
+		<Link href="./" name="Home" />
 	</>		
 ;
 

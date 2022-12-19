@@ -13,9 +13,6 @@ export interface INavItemProps {
   }
 
 export const NavItems: Array<INavItemProps> = [
-	{ name: "Home", icon: FiHome },
-	{ name: "Trending", icon: FiTrendingUp },
-	{ name: "Explore", icon: FiCompass },
-	{ name: "Favourites", icon: FiStar },
-	{ name: "Settings", icon: FiSettings }
+	{ name: "Profile", icon: FiHome },
+	{ name: "List Items", icon:  },
 ];
