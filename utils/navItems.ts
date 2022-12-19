@@ -1,9 +1,5 @@
 import {
-	FiHome,
-	FiTrendingUp,
-	FiCompass,
-	FiStar,
-	FiSettings
+	FiHome
 } from "react-icons/fi";
 import { IconType } from "react-icons";
 
@@ -14,5 +10,5 @@ export interface INavItemProps {
 
 export const NavItems: Array<INavItemProps> = [
 	{ name: "Profile", icon: FiHome },
-	{ name: "List Items", icon:  },
+	{ name: "List Items", icon: FiHome }
 ];
