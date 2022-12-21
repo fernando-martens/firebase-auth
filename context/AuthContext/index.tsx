@@ -9,6 +9,7 @@ export function AuthProvider({ children }){
 	const isAuthenticated = false;
 
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	async function signIn(data: ISignInData){
         
 	}
