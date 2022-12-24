@@ -4,9 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "type-check": "tsc"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.4",
@@ -33,15 +31,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
-    "@chakra-ui/storybook-addon": "^4.0.15",
-    "@storybook/addon-actions": "^6.5.14",
-    "@storybook/addon-essentials": "^6.5.14",
-    "@storybook/addon-interactions": "^6.5.14",
-    "@storybook/addon-links": "^6.5.14",
-    "@storybook/builder-webpack5": "^6.5.14",
-    "@storybook/manager-webpack5": "^6.5.14",
-    "@storybook/react": "^6.5.14",
-    "@storybook/testing-library": "^0.0.13",
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
