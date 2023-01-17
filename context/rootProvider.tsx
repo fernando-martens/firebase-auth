@@ -1,13 +1,10 @@
-import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { AuthProvider } from "./AuthContext";
+import React from "react";
 
 const RootProvider: React.FC = ({ children }) => 
 	<>
 		<ChakraProvider>
-			<AuthProvider>
-				{children}
-			</AuthProvider>	
+			{children}
 		</ChakraProvider>
 	</>
 ;

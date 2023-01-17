@@ -3,23 +3,32 @@ import { useFormik } from "formik";
 import React from "react";
 import Input from "../components/Input";
 import * as yup from "yup";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/router";
 
 
 const Login: React.FC = () => {
 
+	const router = useRouter();
+
 	const schema = yup.object().shape({
-		password: yup.string().required("Senha é requerida"),
-		email: yup.string().required("Email é requerido").email("Email inválido")
+		password: yup.string().required("Password is required"),
+		email: yup.string().required("Email is required").email("Invalid email")
 	  });
 
 	const formik = useFormik({
 		initialValues: { email: "", password: "" },
 		validationSchema: schema,
-		onSubmit: (values, {setSubmitting} ) => {
-			setTimeout(() => {
-				alert(JSON.stringify(values, null, 2));
-				setSubmitting(false);
-			}, 400);
+		onSubmit: async (values, {setSubmitting}) => {
+			const response = await signIn("credentials", {
+				redirect: false,
+				callbackUrl: "/app"
+			}, values);
+			
+			if(response.ok)
+				router.push(response.url);
+
+			setSubmitting(false);
 		}
 	  });
 
@@ -47,10 +56,10 @@ const Login: React.FC = () => {
 								value={formik.values.password}		
 								errors={formik.errors}	
 								touched={formik.touched}	
-								label="Senha"				
+								label="Password"				
 							/>
-							<Button type="submit" disabled={formik.isSubmitting} width="full" colorScheme="purple">
-								Confirmar
+							<Button type="submit" size="md" disabled={formik.isSubmitting} width="full" colorScheme="purple">
+								Sign in
 							</Button>
 						</VStack>	
 					</form>

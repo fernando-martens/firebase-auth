@@ -1,11 +1,13 @@
-import { NextResponse } from "next/server";
+import { withAuth } from "next-auth/middleware";
 
-export function middleware() {
-	const hasPermission = false;
-	if(!hasPermission){
-		return NextResponse.redirect("http://localhost:3000/login");
-	}		
-}
+
+export default withAuth({
+	pages: {
+		signIn: "/login",
+		error: "/"
+	}
+});
+
 
 export const config = {
 	matcher: "/app/:path*"
