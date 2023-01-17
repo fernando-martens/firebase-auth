@@ -2,6 +2,7 @@ import React, { InputHTMLAttributes } from "react";
 import { FormControl, FormErrorMessage, FormLabel, Input } from "@chakra-ui/react";
 import { FormikHandlers } from "formik";
 
+// eslint-disable-next-line no-undef
 interface IComponentInput extends InputHTMLAttributes<HTMLInputElement>{
     onChange: FormikHandlers["handleChange"];
     onBlur: FormikHandlers["handleChange"];
