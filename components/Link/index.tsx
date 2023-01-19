@@ -12,9 +12,11 @@ const ButtonLink: React.FC<IButtonLink> = ({
 	name,
 	...rest
 }) => 
-	<Button colorScheme='teal' size='sm' {...rest}>
-		<Link href={href}>{name}</Link>
-	</Button>
+	<Link href={href}>
+		<Button colorScheme='teal' size='sm' {...rest}>
+			{name}
+		</Button>
+	</Link>
   ;
 
 export default ButtonLink;

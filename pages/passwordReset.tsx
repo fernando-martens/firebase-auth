@@ -61,7 +61,7 @@ const PasswordReset: React.FC = () => {
 										label="Email"			
 									/>	
 									<Button type="submit" size="md" disabled={formik.isSubmitting} width="full" colorScheme="purple">
-                                Recover Password
+                                		Recover Password
 									</Button>
 								</VStack>	
 							</form>
